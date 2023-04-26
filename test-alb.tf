@@ -6,14 +6,14 @@ resource "aws_lb" "example" {
   name               = "example-lb"
   internal           = false
   load_balancer_type = "application"
-  subnets            = ["subnet-0b7417c037d3b736f"]
+  subnets            = ["subnet-0b7417c037d3b736f","subnet-08379ffadd1a6be7e"]
 }
 
 resource "aws_lb_target_group" "example" {
   name_prefix       = "test"
   port              = 80
   protocol          = "HTTP"
-  vpc_id            = "vpc-01234567"
+  vpc_id            = "vpc-08fd6d9e9b79fc0c9"
   target_type       = "instance"
   health_check {
     protocol     = "HTTP"
