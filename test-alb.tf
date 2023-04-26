@@ -10,7 +10,7 @@ resource "aws_lb" "example" {
 }
 
 resource "aws_lb_target_group" "example" {
-  name_prefix       = "test-tg"
+  name_prefix       = "test"
   port              = 80
   protocol          = "HTTP"
   vpc_id            = "vpc-01234567"
@@ -36,9 +36,9 @@ resource "aws_lb_listener" "example" {
   }
 }
 
-resource "aws_elb_attachment" "example" {
+resource "aws_alb_attachment" "example" {
   load_balancer_arn = aws_lb.example.arn
   target_group_arn  = aws_lb_target_group.example.arn
-  target_id         = ["i-0b73c6d866fe1dd5a","i-0b7120b20f0e8990f"] 
+  instance       = ["i-0b73c6d866fe1dd5a","i-0b7120b20f0e8990f"] 
 }
 
