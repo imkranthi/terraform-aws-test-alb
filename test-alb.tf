@@ -40,5 +40,11 @@ resource "aws_elb" "example" {
   load_balancer_arn = aws_lb.example.arn
   target_group_arn  = aws_lb_target_group.example.arn
   instance       = "i-0b73c6d866fe1dd5a" 
+  listener {
+    instance_port     = 80
+    instance_protocol = "HTTP"
+    lb_port           = 80
+    lb_protocol       = "HTTP"
+  }
 }
 
