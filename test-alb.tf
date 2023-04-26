@@ -36,7 +36,7 @@ resource "aws_lb_listener" "example" {
   }
 }
 
-resource "aws_elb_attachment" "example" {
+resource "aws_elb" "example" {
   load_balancer_arn = aws_lb.example.arn
   target_group_arn  = aws_lb_target_group.example.arn
   instance       = "i-0b73c6d866fe1dd5a" 
