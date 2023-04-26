@@ -15,7 +15,7 @@ resource "aws_lb_target_group" "example" {
   protocol          = "HTTP"
   vpc_id            = "vpc-08fd6d9e9b79fc0c9"
   target_type       = "instance"
-  instances       = ["i-0b73c6d866fe1dd5a","i-0b7120b20f0e8990f"]
+  target    = ["i-0b73c6d866fe1dd5a","i-0b7120b20f0e8990f"]
   health_check {
     protocol     = "HTTP"
     path         = "/"
