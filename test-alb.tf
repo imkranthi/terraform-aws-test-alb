@@ -40,6 +40,7 @@ resource "aws_elb" "example" {
   #load_balancer_arn = aws_lb.example.arn
   #target_group_arn  = aws_lb_target_group.example.arn
   instances       = ["i-0b73c6d866fe1dd5a","i-0b7120b20f0e8990f"]
+  subnets            = ["subnet-0b7417c037d3b736f","subnet-08379ffadd1a6be7e"]
   listener {
     instance_port     = 80
     instance_protocol = "HTTP"
