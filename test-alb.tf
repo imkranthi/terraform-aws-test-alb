@@ -54,6 +54,6 @@ resource "aws_elb_attachment" "example" {
   elb = aws_elb.example.arn
   #target_group_arn  = aws_lb_target_group.example.arn
   #target_id         = ["i-0b73c6d866fe1dd5a","i-0b7120b20f0e8990f"]
-  instances       = ["i-0b73c6d866fe1dd5a","i-0b7120b20f0e8990f"]
+  instance       = ["i-0b73c6d866fe1dd5a","i-0b7120b20f0e8990f"]
 }
 
